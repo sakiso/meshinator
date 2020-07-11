@@ -1,28 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+ <v-app>
+  <v-app-bar color="teal darken-1" dark app>
+     <v-toolbar-title>MESHI nator</v-toolbar-title>
+  </v-app-bar>
+  <br><br><br><br>
+
+  <v-container fluid>
+    <v-row> 
+     <v-col>
+
+      <threeRadio></threeRadio>
+
+    </v-col>
+  </v-row>
+
+  </v-container>
+  
+
+  </v-app>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import threeRadio from "./components/threeRadio";
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    threeRadio
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
