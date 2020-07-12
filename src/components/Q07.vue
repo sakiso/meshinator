@@ -50,9 +50,15 @@
     </v-container>
   </div>
 
-
   </div>
 </template>
+
+<script>
+export default {
+   props:["answerList"]
+}
+</script>
+
 
 <style scoped>
  .no-line{

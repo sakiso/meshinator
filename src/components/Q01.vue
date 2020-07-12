@@ -54,6 +54,12 @@
   </div>
 </template>
 
+<script>
+export default {
+   props:["answerList"]
+}
+</script>
+
 <style scoped>
  .no-line{
    text-decoration: none;
