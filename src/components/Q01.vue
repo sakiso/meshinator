@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-  <h2>がっつり系？</h2>
+  <h2 class="text-center">がっつり系？</h2>
 
   <br>
 

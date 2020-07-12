@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-  <h2 class="text-center">肉の気分？</h2>
+  <h2 class="text-center">鶏の気分？</h2>
 
   <br>
 
@@ -10,7 +10,7 @@
       <v-row>
 
         <v-col class="text-center">
-          <router-link to="/Q03" class="no-line">
+          <router-link to="/Q05" class="no-line">
             <v-btn
               rounded
               color="blue darken-2"
@@ -22,7 +22,7 @@
         </v-col>
 
         <v-col class="text-center">
-          <router-link to="/Q03" class="no-line">
+          <router-link to="/Q05" class="no-line">
             <v-btn
               rounded
               color="teal"
@@ -34,7 +34,7 @@
         </v-col>
 
         <v-col class="text-center">
-          <router-link to="/Q03" class="no-line">
+          <router-link to="/Q05" class="no-line">
             <v-btn
               rounded
               color="pink darken-3"
