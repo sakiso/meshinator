@@ -15,7 +15,8 @@
               rounded
               color="blue darken-2"
               dark
-              large>
+              large
+              @click="updateAnswerListQ01">
             はい
             </v-btn>
           </router-link>
@@ -56,7 +57,16 @@
 
 <script>
 export default {
-   props:["answerList"]
+   props:["answerList"],
+
+
+
+   methods:{
+    updateAnswerListQ01 : function(){
+     console.log(this.answerlist)
+    }
+   }
+
 }
 </script>
 

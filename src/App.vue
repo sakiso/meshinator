@@ -7,7 +7,11 @@
      <v-toolbar-title>MESHI nator</v-toolbar-title>
   </v-app-bar>
   <br><br><br><br>
+  
+  <!--お試しようにstoreのstateの中のrestaurantListを表示する-->
+  {{this.$store.state.resutaurantList}}
 
+  <br><br><br><br> 
   <router-view
    :answerList="answerList">
   </router-view>
@@ -112,6 +116,11 @@ export default {
       },
       {
         RestaurantNo : "17",
+        RestaurantName : "すみれ",
+        ChosenGlg : " ",
+      },
+      {
+        RestaurantNo : "18",
         RestaurantName : "何もなし",
         ChosenGlg : " ",
       }      
