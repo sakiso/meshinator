@@ -8,7 +8,7 @@
   </v-app-bar>
   <br><br><br><br>
   
-  <!--お試しようにstoreのstateの中のrestaurantListを表示する-->
+  <!--お試しようにstateの中のrestaurantListを表示する-->
   {{this.$store.state.resutaurantList}}
 
   <br><br><br><br> 

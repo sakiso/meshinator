@@ -5,6 +5,10 @@
 
   <br>
 
+  <button @click="restaurantListUpdate">update</button>
+
+  <br>
+
   <div>
     <v-container>
       <v-row>
@@ -58,12 +62,19 @@
 <script>
 export default {
    props:["answerList"],
-
-
+   data : function(){
+    return{ restaurantId:"" }},
 
    methods:{
-    updateAnswerListQ01 : function(){
+    updateAnswerListQ01(){
      console.log(this.answerlist)
+    },
+    restaurantListUpdate(){
+      this.$store.commit(
+        "updateRestaurantList" ,
+        {restaurantId : "01" ,
+        chosenOrFallOutFlg : "1"})
+
     }
    }
 
