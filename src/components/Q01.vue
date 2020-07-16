@@ -4,9 +4,6 @@
   <h2 class="text-center">がっつり系？</h2>
 
   <br>
-
-  <button @click="restaurantListUpdate">update</button>
-
   <br>
 
   <div>
@@ -20,7 +17,7 @@
               color="blue darken-2"
               dark
               large
-              @click="updateAnswerListQ01">
+              @click="restaurantListUpdate">
             はい
             </v-btn>
           </router-link>
@@ -72,9 +69,8 @@ export default {
     restaurantListUpdate(){
       this.$store.commit(
         "updateRestaurantList" ,
-        {restaurantId : "01" ,
-        chosenOrFallOutFlg : "1"})
-
+        {restaurantId : ["03", "04", "06", "11", "13", "14", "15"] ,
+        chosenOrFallOutFlg : "1"});
     }
    }
 

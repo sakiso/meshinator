@@ -4,6 +4,7 @@
   <h2 class="text-center">居酒屋？</h2>
 
   <br>
+  <br>
 
   <div>
     <v-container>
@@ -15,7 +16,8 @@
               rounded
               color="blue darken-2"
               dark
-              large>
+              large
+              @click="restaurantListUpdate">
             はい
             </v-btn>
           </router-link>
@@ -50,15 +52,30 @@
     </v-container>
   </div>
 
+
   </div>
 </template>
 
 <script>
 export default {
-   props:["answerList"]
+   props:["answerList"],
+   data : function(){
+    return{ restaurantId:"" }},
+
+   methods:{
+    updateAnswerListQ01(){
+     console.log(this.answerlist)
+    },
+    restaurantListUpdate(){
+      this.$store.commit(
+        "updateRestaurantList" ,
+        {restaurantId : ["01", "02", "07", "10", "11", "12", "13", "14", "15", "16", "17"] ,
+        chosenOrFallOutFlg : "1"});
+    }
+   }
+
 }
 </script>
-
 
 <style scoped>
  .no-line{

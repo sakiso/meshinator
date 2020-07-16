@@ -4,6 +4,7 @@
   <h2 class="text-center">肉の気分？</h2>
 
   <br>
+  <br>
 
   <div>
     <v-container>
@@ -15,7 +16,8 @@
               rounded
               color="blue darken-2"
               dark
-              large>
+              large
+              @click="restaurantListUpdate">
             はい
             </v-btn>
           </router-link>
@@ -56,7 +58,22 @@
 
 <script>
 export default {
-   props:["answerList"]
+   props:["answerList"],
+   data : function(){
+    return{ restaurantId:"" }},
+
+   methods:{
+    updateAnswerListQ01(){
+     console.log(this.answerlist)
+    },
+    restaurantListUpdate(){
+      this.$store.commit(
+        "updateRestaurantList" ,
+        {restaurantId : ["04"] ,
+        chosenOrFallOutFlg : "1"});
+    }
+   }
+
 }
 </script>
 
