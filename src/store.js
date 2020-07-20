@@ -135,9 +135,116 @@ const store = new Vuex.Store({
           state.resutaurantList.find(el => el.restaurantId == item).fallOutFlg = 1
         )
       }
-    }
+    },
+  //restaurantListのstateを初期化する（診断終了してTOPに戻るときに使う）
+  initializeRestaurantList( state ){
+    state.resutaurantList
+    = [
+      {
+        restaurantId : "01",
+        restaurantName : "おいでまい",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      },
+      {
+        restaurantId : "02",
+        restaurantName : "東家",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      },
+      {
+        restaurantId : "03",
+        restaurantName : "王将",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      },
+      {
+        restaurantId : "04",
+        restaurantName : "和っ黒",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      },
+      {
+        restaurantId : "05",
+        restaurantName : "うどん屋",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      },
+      {
+        restaurantId : "06",
+        restaurantName : "カッパハウス",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      },
+      {
+        restaurantId : "07",
+        restaurantName : "ピッツェリア ナポレターナ ラルデンツァ",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      },
+      {
+        restaurantId : "08",
+        restaurantName : "ヤオコーの惣菜",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      },
+      {
+        restaurantId : "09",
+        restaurantName : "やよい軒",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      },
+      {
+        restaurantId : "10",
+        restaurantName : "手打ちそば 弥兵衛",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      },
+      {
+        restaurantId : "11",
+        restaurantName : "サイゼリヤ",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      },
+      {
+        restaurantId : "12",
+        restaurantName : "むさし屋",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      },
+      {
+        restaurantId : "13",
+        restaurantName : "ダンダダン酒場",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      },
+      {
+        restaurantId : "14",
+        restaurantName : "中華の新規開拓",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      },
+      {
+        restaurantId : "15",
+        restaurantName : "イタリアンの新規開拓",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      },
+      {
+        restaurantId : "16",
+        restaurantName : "和食居酒屋の新規開拓",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      },
+      {
+        restaurantId : "17",
+        restaurantName : "すみれ",
+        chosenFlg : " ",
+        fallOutFlg : " ",
+      }
+      ]
   }
-
+}
 });
 
 //storeをエクスポート

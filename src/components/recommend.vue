@@ -6,15 +6,23 @@
   <br>
 
     <v-container>
-      <v-row>
+      <v-row justify="center">
 
-        <v-col class="text-center">
+        <v-col class="text-center" cols="8">
          行くべきお店は…<br><br>
-         <ul>
-           <li v-for="item in recommendRestaurantList" v-bind:key="item">
+
+         <v-card
+          max-width="400"
+          color="teal darken-1"
+          dark >
+          <v-card-text>
+          <v-list color="teal darken-1" class="body-1">
+           <v-list-item v-for="item in recommendRestaurantList" v-bind:key="item">
              {{item}}
-           </li>
-         </ul>
+           </v-list-item>
+         </v-list>
+         </v-card-text>
+         </v-card>
 
 
         </v-col>
@@ -23,7 +31,12 @@
     
     <v-row>
       <v-col class="text-center">
-        <router-link to="/">TOPに戻る</router-link>
+       <v-btn
+       color="light-blue darken-3"
+       x-large
+       dark>
+        <router-link to="/" @click.native="initializeList()" class="no-line white-text">TOPに戻る</router-link>
+        </v-btn>
       </v-col>
     </v-row>
 
@@ -49,7 +62,17 @@ created :function(){
   work.forEach(el => {
    this.recommendRestaurantList.push(el.restaurantName)
   });
-  }
+  },
+
+ //フラグを立てたRestaurantListを初期化する（TOPに戻るときに発火）
+ methods:{
+    initializeList(){
+      console.log("delete")
+      this.$store.commit(
+        "initializeRestaurantList");
+    }
+   }
+
 }
 </script>
 
@@ -57,5 +80,7 @@ created :function(){
  .no-line{
    text-decoration: none;
  }
-
+ .white-text{
+   color: #FFFFFF;
+ }
 </style>
