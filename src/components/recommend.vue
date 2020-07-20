@@ -9,7 +9,7 @@
       <v-row>
 
         <v-col class="text-center">
-         行くべきお店は…<br>
+         行くべきお店は…<br><br>
          <ul>
            <li v-for="item in recommendRestaurantList" v-bind:key="item">
              {{item}}
@@ -42,8 +42,13 @@ export default {
   },
 
 created :function(){
-  this.recommendRestaurantList = this.$store.state.resutaurantList.filter(el => el.chosenFlg == "1")
-  console.log(this.$store.state.resutaurantList.filter(el => el.chosenFlg == "1"))
+  //chosenFlgが1の要素のみにフィルタしてwork配列に格納
+  const work = this.$store.state.resutaurantList.filter(el => el.chosenFlg == "1")
+
+  //work配列をforEachで回してrestaurantNameだけの配列にする
+  work.forEach(el => {
+   this.recommendRestaurantList.push(el.restaurantName)
+  });
   }
 }
 </script>
