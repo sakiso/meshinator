@@ -55,8 +55,10 @@ export default {
   },
 
 created :function(){
-  //chosenFlgが1の要素のみにフィルタしてwork配列に格納
-  const work = this.$store.state.resutaurantList.filter(el => el.chosenFlg == "1")
+  //chosenFlg=1 かつ falOutFlg≠1 の 要素のみにフィルタしてwork配列に格納
+  const work = this.$store.state.resutaurantList.filter( el =>
+    el.chosenFlg == "1"
+    && el.fallOutFlg != "1" )
 
   //work配列をforEachで回してrestaurantNameだけの配列にする
   work.forEach(el => {

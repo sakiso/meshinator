@@ -17,7 +17,7 @@
               color="blue darken-2"
               dark
               large
-              @click="restaurantListUpdate">
+              @click="restaurantListUpdateYes">
             はい
             </v-btn>
           </router-link>
@@ -41,7 +41,8 @@
               rounded
               color="pink darken-3"
               dark
-              large>
+              large
+              @click="restaurantListUpdateNo">
             いいえ
             </v-btn>
           </router-link>
@@ -62,15 +63,27 @@ export default {
    data : function(){
     return{ restaurantId:"" }},
 
+
    methods:{
-    updateAnswerListQ01(){
-     console.log(this.answerlist)
-    },
-    restaurantListUpdate(){
+    //"はい"が選ばれたときのメソッド
+    //候補に入れるもの
+    restaurantListUpdateYes(){
       this.$store.commit(
         "updateRestaurantList" ,
         {restaurantId : ["01", "02", "07", "10", "11", "12", "13", "14", "15", "16", "17"] ,
-        chosenOrFallOutFlg : "1"});
+        chosenOrFallOutFlg : "1"}
+        );
+    //脱落させるもの なし
+     },
+
+//"いいえ"が選ばれたときのメソッド
+    restaurantListUpdateNo(){
+      //脱落させるもの
+      this.$store.commit(
+        "updateRestaurantList" ,
+        {restaurantId : ["01", "02", "12", "13", "17"] ,
+        chosenOrFallOutFlg : "2"}
+        );
     }
    }
 
